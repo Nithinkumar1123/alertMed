@@ -1,0 +1,159 @@
+.role-card {
+  transition: background 0.5s ease, transform 0.3s ease;
+  border-radius: 12px;
+}
+
+.role-card.patient-bg {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+}
+
+.role-card.doctor-bg {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  color: white;
+}
+
+.role-card:hover {
+  transform: translateY(-5px);
+}
+
+.role-icon {
+  transition: transform 0.3s ease;
+}
+
+.role-card:hover .role-icon {
+  transform: scale(1.2);
+}
+
+.role-content h4, .role-content small {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.signup-btn {
+  overflow: hidden;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.role-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transform: scale(0);
+  animation: badge-pop 0.5s forwards;
+}
+
+.patient-badge {
+  background: #007bff; /* Blue for patient */
+}
+
+.doctor-badge {
+  background: #28a745; /* Green for doctor */
+}
+
+@keyframes badge-pop {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Background gradient with subtle animation */
+.signup-bg {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #74ebd5, #ACB6E5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: bgShift 15s ease infinite;
+}
+
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Card shadow and hover effect */
+.signup-card {
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.signup-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Signup button with role badge */
+.signup-btn {
+  overflow: hidden;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.role-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transform: scale(0);
+  animation: badge-pop 0.5s forwards;
+}
+
+.patient-badge { background: #007bff; }
+.doctor-badge { background: #28a745; }
+
+@keyframes badge-pop {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+/* Flex adjustments for responsive badge */
+.role-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  min-width: 70px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  background: #007bff; /* patient default, overridden below */
+  transition: transform 0.3s, font-size 0.3s;
+}
+
+.patient-badge { background: #007bff; }
+.doctor-badge { background: #28a745; }
+
+/* Small devices adjustments */
+@media (max-width: 576px) {
+  .role-badge {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    min-width: 60px;
+  }
+  .signup-btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
